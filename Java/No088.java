@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class WhichIsNext{
+public class No088{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

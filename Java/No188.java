@@ -1,4 +1,4 @@
-public class HappyDay{
+public class No188{
 	public static void main(String[] args){
 		
 		int happyday = 0;

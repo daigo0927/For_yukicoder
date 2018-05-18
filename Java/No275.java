@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Arrays;
 
-public class GetMed{
+public class No275{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();

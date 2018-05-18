@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DealCaps{
+public class No163{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		String password = sc.next();

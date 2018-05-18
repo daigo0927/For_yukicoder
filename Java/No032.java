@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Chokin{
+public class No032{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int R = 0;

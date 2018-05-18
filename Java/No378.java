@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GetFame{
+public class No378{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PockyGame{
+public class No063{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int L = sc.nextInt();

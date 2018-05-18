@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Stair{
+public class No388{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int s = sc.nextInt();

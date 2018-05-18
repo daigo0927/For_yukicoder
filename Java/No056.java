@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.math.BigDecimal;
 
-public class ConsumTax{
+public class No056{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.math.BigDecimal;
 
-public class HatePlus{
+public class No353{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

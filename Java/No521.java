@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CheeseAndMouse{
+public class No521{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

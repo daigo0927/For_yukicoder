@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Arrays;
 
-public class CleanRoad{
+public class No370{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

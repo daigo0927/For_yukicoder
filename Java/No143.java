@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Setsubun{
+public class No143{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 
