@@ -1,30 +1,31 @@
-""" !!!This solution is collect but get TLE in python!!! """
-n = int(input())
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
+# Greatly refered to the solution: https://atcoder.jp/contests/abc091/submissions/3549633
+from sys import stdin
+import numpy as np
+ORD = 28
 
-ans = 0
-for k in range(28, -1, -1):
-    i_1, i_2, i_3 = 0, 0, 0
-    T = 1<<k
-    add = 0
+n = int(stdin.readline())
+a = np.array(list(map(int, stdin.readline().split())))
+b = np.array(list(map(int, stdin.readline().split())))
 
-    for i in range(n):
-        a[i] %= 2*T
-        b[i] %= 2*T
+def search(a_, b_, pow2):
+    c1 = np.searchsorted(a_, pow2 - b_)
+    c2 = np.searchsorted(a_, 2*pow2 - b_)
+    c3 = np.searchsorted(a_, 3*pow2 - b_)
+    return n**2 - np.sum(c3) + np.sum(c2) - np.sum(c1)
 
-    a = sorted(a, reverse = True)
-    b = sorted(b)
-    for i in range(n):
-        while i_1 < n and a[i]+b[i_1] < T:
-            i_1 += 1
-        while i_2 < n and a[i]+b[i_2] < 2*T:
-            i_2 += 1
-        while i_3 < n and a[i]+b[i_3] < 3*T:
-            i_3 += 1
-        add += (i_2-i_1) + (n-i_3)
+a_ord = np.zeros((ORD, n), dtype = int)
+b_ord = np.zeros((ORD, n), dtype = int)
+for i in range(1, ORD+1):
+    a_ord[i-1, :] = a%(2**i)
+    b_ord[i-1, :] = b%(2**i)
+a_ord = np.sort(a_ord, axis = 1)
 
-    if add%2 == 1:
-        ans += T
+ans = ''
+for i in range(ORD):
+    count = search(a_ord[i], b_ord[i], 2**i)
+    ans += '0' if count%2 == 0 else '1'
+    
+count = search(a_ord[-1], b_ord[-1], 2**ORD)
+ans += '0' if count%2 == 0 else '1'
 
-print(ans)
+print(int(ans[::-1], 2))
