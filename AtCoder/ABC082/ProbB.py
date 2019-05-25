@@ -1,0 +1,9 @@
+s = input()
+t = input()
+
+s = ''.join(sorted(s))
+t = ''.join(sorted(t)[::-1])
+if s < t:
+    print('Yes')
+else:
+    print('No')
