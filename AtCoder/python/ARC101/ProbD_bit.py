@@ -28,10 +28,11 @@ while right-left > 1: # bisection search: O(logA)
     cumsum = 0 # cumulative sum
     bit.add(cumsum+n, 1)
     for i in range(n): # O(n)
+        print(bit.bit)
         cumsum += 1 if a[i] >= a_sorted[mid] else -1 # update region sum by comparison
         num += bit.sum(cumsum+n) # add #ranges by cumsum+n: O(logn)
         bit.add(cumsum+n, 1) # increment BIT element at cumsum+n(=count of interested regions)
-    # print(bit.bit, left, right)
+    print(bit.bit, left, right)
 
     # update search range
     if num >= math.ceil(n*(n+1)//4):
